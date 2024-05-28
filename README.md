@@ -15,4 +15,3 @@ Requisitos:
 
   ** status component
     1- deve ter um componente que mostre cada atributo do jogador (seus itens, dinheiro total durante todo o jogo, dinheiro atual, multiplicador)
-  
