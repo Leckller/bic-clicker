@@ -1,6 +1,6 @@
-import BicType, { UpgradeType } from "../types/Bic";
-import { increment } from "../redux/slices/clickSlice";
-import { RootState } from "../redux/store";
+import BicType, { UpgradeType } from "../../types/Bic";
+import { increment } from "../../redux/slices/clickSlice";
+import { RootState } from "../../redux/store";
 
 export class BicClass implements BicType {
 
@@ -22,7 +22,6 @@ export class BicClass implements BicType {
   multiplierUpgrade(upgrade: UpgradeType): void {
     // Verifica o tipo do upgrade e o atualiza
     upgrade.type === "clickBase" ? (this.clickBase += upgrade.value) : (this.multiplier += upgrade.value)
-
   }
 
   bicClick() {

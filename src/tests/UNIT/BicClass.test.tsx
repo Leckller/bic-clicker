@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Bic from '../../components/Bic.tsx';
+import Bic from '../../components/Clicker/Bic.tsx';
 import UserEvent from "@testing-library/user-event"
 import { Provider } from 'react-redux';
 import { store } from '../../redux/store.ts';

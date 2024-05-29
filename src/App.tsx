@@ -1,12 +1,17 @@
 import './App.css'
-import Bic from './components/Bic'
+import Bic from './components/Clicker/Bic'
+import Layout from './components/Layout/Layout'
+import Loja from './components/loja/Loja'
+import Status from './components/status/Status'
 
 function App() {
 
   return (
-    <div className='h-screen w-screen flex items-center'>
-      <Bic></Bic>
-    </div>
+    <Layout>
+      <Bic />
+      <Status />
+      <Loja />
+    </Layout>
   )
 }
 
