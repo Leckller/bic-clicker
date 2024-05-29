@@ -1,20 +1,23 @@
-import { BicClass } from "./BicClass";
+import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
+import BicClass from "./BicClass";
 
 function Bic() {
-
-  const bic = new BicClass();
+  const dispatch = useAppDispatch();
+  const { money } = useAppSelector(state => state.clicks)
+  BicClass.setDispatch(dispatch)
 
   return (
-    <>
-      <div>
-        <button
-          onClick={() => {
-            bic.bicClick()
-          }}>
-          CANETA AZUL
-        </button>
-      </div>
-    </>
+    <div>
+      <button
+        data-testid="bicButton"
+        onClick={() => {
+          BicClass.bicClick();
+          console.log(BicClass)
+        }}>
+        CANETA AZUL
+      </button>
+      <h1 data-testid="moneyText">{money}</h1>
+    </div>
   )
 }
 

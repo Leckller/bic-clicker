@@ -1,8 +1,17 @@
 export default interface BicType {
-  mult: number;
+
+  multiplier: number;
+  clickBase: number;
+  bicPaint: number;
+  bonus: boolean;
 
   bicClick(): void;
   bicExplode(): void;
   bicEnough(): void;
-  multUpgrade(upgrade: number): void;
+  multiplierUpgrade(upgrade: UpgradeType): void;
 }
+
+export type UpgradeType = {
+  type: "clickBase" | "multiplier";
+  value: number;
+} 
