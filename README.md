@@ -3,8 +3,8 @@ Requisitos:
     1- deve ser possivel clickar na caneta e aumentar o dinheiro;
     
     ** Requisitos bonus - bic component
-      1- deve haver uma chance de ao clickar a caneta estourar e o jogador ganhar um bonus no multiplicador de dinheiro ganho para cada cliques (a chance deve ser de 5% e deve durar 60 segundos);
-      2- após X cliques a caneta deve esgotar a tinta e fazer o jogador
+      1- deve haver uma chance de ao clickar a caneta estourar e o jogador ganhar um bonus no multiplicador de dinheiro ganho para cada cliques (a chance deve ser de 2% e deve durar 60 segundos);
+      2- após 100 cliques a caneta deve esgotar a tinta e dar ao jogador um bonus do click base elevado ao multiplicador (o bonus deve ser no minimo de 100);
   
   ** loja component
     1- deve ser possivel comprar itens da loja

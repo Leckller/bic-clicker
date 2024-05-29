@@ -42,6 +42,7 @@ export class BicClass implements BicType {
   }
 
   bicExplode(): void {
+    console.log("bonus start")
     this.bonus = true;
     // Incrementa em 10x o multiplicador por 60 segundos
     this.multiplier *= 10;
