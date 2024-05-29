@@ -1,6 +1,6 @@
-import BicType, { UpgradeType } from "../types/Bic";
-import { increment } from "../redux/slices/clickSlice";
-import { RootState } from "../redux/store";
+import BicType, { UpgradeType } from "../../types/Bic";
+import { increment } from "../../redux/slices/clickSlice";
+import { RootState } from "../../redux/store";
 
 export class BicClass implements BicType {
 
@@ -22,7 +22,6 @@ export class BicClass implements BicType {
   multiplierUpgrade(upgrade: UpgradeType): void {
     // Verifica o tipo do upgrade e o atualiza
     upgrade.type === "clickBase" ? (this.clickBase += upgrade.value) : (this.multiplier += upgrade.value)
-
   }
 
   bicClick() {
@@ -30,7 +29,7 @@ export class BicClass implements BicType {
     if (this.bicPaint <= 0) { this.bicEnough(); }
 
     const chanceToExplode = Math.floor(Math.random() * 100);
-    if (this.bonus === false && (chanceToExplode > 0 && chanceToExplode < 2)) { this.bicExplode() }
+    if (this.bonus === false && (chanceToExplode > 0 && chanceToExplode < 20)) { this.bicExplode() }
     // Incrementa o dinheiro usando a multiplicação do click base com o multiplicador
     this.dispatch(increment(this.clickBase * this.multiplier));
   }
