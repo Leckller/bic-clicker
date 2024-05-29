@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import clickSlice from './slices/clickSlice'
+import popupSlice from './slices/popupSlice'
 
 export const store = configureStore({
   reducer: {
-    clicks: clickSlice
+    clicks: clickSlice,
+    popup: popupSlice
   },
 })
 

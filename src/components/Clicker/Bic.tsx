@@ -9,7 +9,7 @@ function Bic() {
 
   return (
     <div
-      className="max-w-[400px] h-full bg-slate-400
+      className="w-[100%] md:w-[33%] bg-slate-400
       flex flex-col justify-between text-center pt-10 pb-10">
 
       <h2

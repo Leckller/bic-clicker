@@ -29,7 +29,7 @@ export class BicClass implements BicType {
     if (this.bicPaint <= 0) { this.bicEnough(); }
 
     const chanceToExplode = Math.floor(Math.random() * 100);
-    if (this.bonus === false && (chanceToExplode > 0 && chanceToExplode < 2)) { this.bicExplode() }
+    if (this.bonus === false && (chanceToExplode > 0 && chanceToExplode < 20)) { this.bicExplode() }
     // Incrementa o dinheiro usando a multiplicação do click base com o multiplicador
     this.dispatch(increment(this.clickBase * this.multiplier));
   }
