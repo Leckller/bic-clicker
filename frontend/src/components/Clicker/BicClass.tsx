@@ -10,6 +10,7 @@ export class BicClass implements BicType {
   bicPaint = 100;
   bonus = false;
   dispatch: any;
+  selector: any;
 
   items: ProdutoClass[] = [];
 
@@ -24,6 +25,14 @@ export class BicClass implements BicType {
 
   setDispatch(dispatch: any): void {
     this.dispatch = dispatch;
+  }
+  setSelector(selector: RootState): void {
+    this.selector = selector;
+  }
+
+  getBics(): number{
+    const rootState = this.selector as RootState;
+    return rootState.clicks.money;
   }
 
   multiplierUpgrade(upgrade: UpgradeType): void {
