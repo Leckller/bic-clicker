@@ -1,6 +1,7 @@
 import BicType, { UpgradeType } from "../../types/Bic";
 import { increment } from "../../redux/slices/clickSlice";
 import { RootState } from "../../redux/store";
+import { ProdutoClass } from "../loja/ProdutoClass";
 
 export class BicClass implements BicType {
 
@@ -10,9 +11,15 @@ export class BicClass implements BicType {
   bonus = false;
   dispatch: any;
 
+  items: ProdutoClass[] = [];
+
   static localSave(status: RootState) {
     // Salva os dados atuais do jogador localmente
     localStorage.setItem("save", JSON.stringify(status));
+  }
+
+  adicionarItem(item: ProdutoClass): void {
+      this.items.push(item)
   }
 
   setDispatch(dispatch: any): void {
@@ -51,7 +58,6 @@ export class BicClass implements BicType {
       this.bonus = false
       console.log("bonus end")
     }, 60000);
-
   }
 }
 

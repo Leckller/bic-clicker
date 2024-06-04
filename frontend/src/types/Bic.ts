@@ -1,3 +1,5 @@
+import { ProdutoClass } from "../components/loja/ProdutoClass";
+
 export default interface BicType {
 
   multiplier: number;
@@ -9,6 +11,7 @@ export default interface BicType {
   bicExplode(): void;
   bicEnough(): void;
   multiplierUpgrade(upgrade: UpgradeType): void;
+  adicionarItem(item: ProdutoClass): void;
 }
 
 export type UpgradeType = {
