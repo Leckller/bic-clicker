@@ -1,16 +1,14 @@
 import { useAppSelector } from "../../hooks/reduxHooks"
-import BicClass from "../Clicker/BicClass";
-
 
 function Status() {
-  const { status } = useAppSelector(state => state.popup);
+  const { popup: {status}, clicks: {bonus, multiplicador} } = useAppSelector(state => state);
 
   return (
     <div className={`${status ? "" : "hidden"} md:flex md:static md:w-[33%] absolute w-full h-full bg-white border`}>
       Status
       <div>
-        <h2>{`Multiplicador: ${BicClass.multiplier}`}</h2>
-        <h2 className="animate-bounce">{`${BicClass.bonus ? "BONUS DE MULTIPLICADOR !!!" : ""}`}</h2>
+        <h2>{`Multiplicador: ${multiplicador}`}</h2>
+        <h2 className="animate-bounce">{`${bonus ? "BONUS DE MULTIPLICADOR !!!" : ""}`}</h2>
       </div>
     </div>
   )
