@@ -9,4 +9,4 @@ function Loja() {
   )
 }
 
-export default Loja
+export default Loja;

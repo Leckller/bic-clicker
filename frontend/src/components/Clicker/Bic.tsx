@@ -1,13 +1,9 @@
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
+import { useAppSelector } from "../../hooks/reduxHooks";
 import BicClass from "./BicClass";
 import canetaAzul from '../../assets/azul-caneta.jpg'
 
 function Bic() {
-  const dispatch = useAppDispatch();
-  const selector = useAppSelector(state => state);
   const { money } = useAppSelector(state => state.clicks)
-  BicClass.setDispatch(dispatch);
-  BicClass.setSelector(selector);
 
   return (
     <div

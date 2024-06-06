@@ -1,20 +1,20 @@
-import { ProdutoClass } from "../components/loja/ProdutoClass";
-
 export default interface BicType {
-
-  multiplier: number;
-  clickBase: number;
-  bicPaint: number;
-  bonus: boolean;
+  selector: any;
+  dispatch: any;
 
   bicClick(): void;
   bicExplode(): void;
   bicEnough(): void;
-  multiplierUpgrade(upgrade: UpgradeType): void;
-  adicionarItem(item: ProdutoClass): void;
 }
 
 export type UpgradeType = {
   type: "clickBase" | "multiplier";
   value: number;
 } 
+
+export interface ClickState {
+  money: number,
+  multiplicador: number,
+  bonus: boolean,
+  clickBase: number,
+}
